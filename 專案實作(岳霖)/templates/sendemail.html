@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../static/css/sendemail.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>郵件寄送系統</title>
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <h2><a href="/administrator">功能</a></h2>
+        <ul>
+            <li><a href="/product">首頁</a></li>
+            <li><a href="/allproduct">商品管理系统</a></li>
+            <li><a href="/alladmin">會員管理系統</a></li>
+            <li><a href="/allqa">問題回答系統</a></li>
+            <li><a href="/signout">登出</a></li>
+        </ul>
+    </div>
+    <div class="content" action="/sendemail" method="GET">
+        <h1>郵件寄送系統</h1>
+        <form action="/send" method="POST" id="emailForm">
+            <div class="message" id="successMessage"></div>
+            <div class="form-group">
+              <label for="subject">主 旨 :</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label>收 件 者 :</label>
+              <div class="recipient-list">
+                {% for user in users %}
+                <div class="recipient">
+                  <input type="checkbox" id="{{user.email}}" name="recipient[]" value="{{user.email}}">
+                  <label for="{{user.email}}">{{user.email}}</label>
+                </div>
+                {% endfor %}
+                <!-- Add more recipients here -->
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="content">內 容 :</label>
+              <textarea id="content" name="content" rows="6" required></textarea>
+            </div>
+            <button type="submit">發送郵件</button>
+          </form>
+          
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $('#emailForm').submit(function(event){
+            
+            event.preventDefault();
+    
+            
+            var confirmation = confirm("確定送出郵件嗎?");
+            
+            
+            if (confirmation) {
+                sendEmail();
+            }
+        });
+    
+        function sendEmail() {
+            
+            $.ajax({
+                type: 'POST',
+                url: '/send',
+                data: $('#emailForm').serialize(),
+                success: function(response){
+                    
+                    $('#successMessage').text(response.message).fadeIn();
+    
+                    
+                    setTimeout(function(){
+                        $('#successMessage').fadeOut();
+                    }, 2000);
+                },
+                error: function(xhr, status, error){
+                    
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../static/css/productinfo.css">
+<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+<title>商品資訊</title>
+
+</head>
+
+<body style="background-color: #DEF1ED;">
+    <header style="background-color: #278092;">
+      
+        <div class="logo">
+          <a href="/product"><img src="../static/images/real-estate.png"/></a>
+        
+        </div>
+        <div class="menu">
+          <a href="#">
+            <ion-icon name="close" class="close"></ion-icon>
+          </a>
+        </div>
+        <div class="search">
+          <form action="/search" method="POST">
+          <input type="text" placeholder="找啥" id="input" name="search">
+          <button class="searchb">
+            搜尋
+          </button>
+        </form>
+        </div>
+        
+        <div class="heading">
+          <ul>
+              <li>
+                <div class="dropdowns" style="background-color: #278092;">
+                  <div class="dropdown" style="background-color: #278092;">
+                    <a href="/caption" >購買規定</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="dropdowns" style="background-color: #278092;">
+                  <div class="dropdown" style="background-color: #278092;">
+                    <a href="/Q_A" >Q&A</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="dropdowns" style="background-color: #278092;">
+                  <div class="dropdown" style="background-color: #278092;">
+                    <a href="#" class="under"><img class="menuimg" src="../static/images/menu.png"  /></a>
+                    <div class="dropdown-menu" style="background-color: #278092;">
+                      <div style="background-color: #278092;">
+                        <button style="background-color: #278092;"><a href="/my4boss">我4頭家</a></button>
+                        <button style="background-color: #278092;"><a href="/mylove">我的最愛</a></button>
+                        <div class="bur" style="background-color: #278092;">
+                          <a href="#">分類</a>
+                          <div class="nosee" style="background-color: #278092;">
+                            <button style="background-color: #278092;"><a href="/IMproduct">資管系</a></button>
+                            <button style="background-color: #278092;"><a href="/Fin">財管系</a></button>
+                            <button style="background-color: #278092;"><a href="/LAW">法律系</a></button>
+                            <button style="background-color: #278092;"><a href="/logistics">運籌系</a></button>
+                            <button style="background-color: #278092;"><a href="/LibEdu">通識課程</a></button>
+                            <button style="background-color: #278092;"><a href="/other">其他</a></button>
+                          </div>
+                        </div>
+                        <button style="background-color: #278092;"><a href="/admin">會員中心</a></button>
+                        <button style="background-color: #278092;"><a href="/team">製作團隊</a></button>
+                        <button style="background-color: #278092;"><a href="/signout">登出</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </div>
+        <div class="heading1">
+          <ion-icon name="menu" class="ham"></ion-icon>
+        </div>
+      
+    </header>
+
+<div class="container" action="/productinfo" method="GET">
+  <form action="/addmylove" method="POST">
+  <img class="productimg" width="240" height="260" src={{productinfo.productimage}} alt="商品圖片">
+  <h1>{{productinfo.productname}}</h1>
+  <div class="info">
+    <p><label>作 者 ：</label>{{productinfo.productAuthor}}</p>
+    <p><label>出 版 社 ：</label>{{productinfo.productpress}}</p>
+    <p><label>I S B N ：</label>{{productinfo.productISBN}}</p>
+    <p><label>書 本 狀 態 ：</label>{{productinfo.productdescribe}}</p>
+    <p><label>價格 ：</label> <span class="price">${{productinfo.productprice}}</span></p>
+    <p><label>書 籍 類 型 ：</label>{{productinfo.producttype}}</p>
+    <p><label>聯 絡 方 式 ：</label>{{productinfo.productcall}}</p>
+    <p><label>賣 家 資 訊 ：</label>{{productinfo.studentID}}</p>
+    <input type="hidden" name="productimage" value="{{ productinfo.productimage }}">
+    <input type="hidden" name="productname" value="{{ productinfo.productname }}">
+    <input type="hidden" name="productAuthor" value="{{ productinfo.productAuthor }}">
+    <input type="hidden" name="productpress" value="{{ productinfo.productpress }}">
+    <input type="hidden" name="productISBN" value="{{ productinfo.productISBN }}">
+    <input type="hidden" name="productdescribe" value="{{ productinfo.productdescribe }}">
+    <input type="hidden" name="productprice" value="{{ productinfo.productprice }}">
+    <input type="hidden" name="producttype" value="{{ productinfo.producttype }}">
+    <input type="hidden" name="productcall" value="{{ productinfo.productcall }}">
+    <input type="hidden" name="studentID" value="{{ productinfo.studentID }}">
+  </div>
+  <button class="favorite-btn">加入我的最愛</button>
+  </form>
+</div>
+
+</body>
+</html>

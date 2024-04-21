@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>購買須知</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/IM.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  </head>
+  
+  
+  <body style="background-color: #DEF1ED;">
+  <header style="background-color: #278092;">
+    
+      <div class="logo">
+        <a href="/product"><img src="../static/images/real-estate.png"/></a>
+      
+      </div>
+      <div class="menu">
+        <a href="#">
+          <ion-icon name="close" class="close"></ion-icon>
+        </a>
+      </div>
+      <div class="search">
+        <form action="/search" method="POST">
+        <input type="text" placeholder="找啥" id="input" name="search">
+        <button class="searchb">
+          搜尋
+        </button>
+      </form>
+      </div>
+      
+      <div class="heading">
+        <ul>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="/caption" >購買規定</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="/Q_A" >Q&A</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="#" class="under"><img class="menuimg" src="../static/images/menu.png"  /></a>
+                  <div class="dropdown-menu" style="background-color: #278092;height: 256px;">
+                    <div style="background-color: #278092;">
+                      <button style="background-color: #278092;"><a href="/my4boss">我4頭家</a></button>
+                      <button style="background-color: #278092;"><a href="/mylove">我的最愛</a></button>
+                      <div class="bur" style="background-color: #278092;">
+                        <a href="#">分類</a>
+                        <div class="nosee" style="background-color: #278092;">
+                          <style>
+                            .bur:hover .nosee{
+                              display: block;
+                              position: absolute;
+                              visibility: visible;
+                              top: -92px;
+                              left: 100px;
+                              color: #fff;
+                              font-size: .8em;
+                              background: rgb(39, 128, 146);
+                              padding: 11px 50px 5px;
+                              z-index: -1;
+                            }
+                          </style>
+                          <button style="background-color: #278092;"><a href="/IMproduct">資管系</a></button>
+                          <button style="background-color: #278092;"><a href="/Fin">財管系</a></button>
+                          <button style="background-color: #278092;"><a href="/LAW">法律系</a></button>
+                          <button style="background-color: #278092;"><a href="/logistics">運籌系</a></button>
+                          <button style="background-color: #278092;"><a href="/LibEdu">通識課程</a></button>
+                          <button style="background-color: #278092;"><a href="/other">其他</a></button>
+                        </div>
+                      </div>
+                      <button style="background-color: #278092;"><a href="/admin">會員中心</a></button>
+                      <button style="background-color: #278092;"><a href="/team">製作團隊</a></button>
+                      <button style="background-color: #278092;"><a href="/signout">登出</a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <div class="heading1">
+        <ion-icon name="menu" class="ham"></ion-icon>
+      </div>
+    
+  </header>
+    <section style="height: 1000px;">
+        <div class="con">
+            <div class="alltext">
+              <p class="text">為了確保您(賣家/買家)能有一個良好的購物環境，請注意以下幾點重點須知 :</p><br>
+              <p>1. 書籍詳情</p>
+              <ul>
+                <li>詳細說明/參閱書本的保存狀況。</li>
+                <li>註明是否有破損、污漬、書寫筆記等瑕疵。</li>
+                <li>提供清晰的實物圖片以供參考。</li>
+              </ul><br>
+              <p>2. 價格透明</p>
+              <ul>
+                <li>明確標示商品價格，不隱瞞任何費用。</li>
+                <li>確定購買後，禁止出現強迫減價之行為。</li>
+              </ul><br>
+              <p>3. 版權合規</p>
+              <ul>
+                <li>不得拍賣盜版或非法複製書籍。</li>
+                <li>若有侵權書籍的情形，則立即下架並取消該賣家資格。</li>
+              </ul><br>
+              <p>4. 交易模式</p>
+              <ul>
+                <li>本網站不提供線上金錢的往來，只提供賣家資訊，一律由買/賣家雙方自行討論面交地點。</li>
+                <li>買/賣家皆須留下正確的聯絡資訊，以利爾後交易的流暢性。</li>
+              </ul><br>
+              <p>5. 隱私權政策</p>
+              <p>如您使用本服務或在本網站提供資訊，即表示您：</p>
+              <ul>
+                <li>同意管理者收集、使用或處理您的內容和個人資料。</li>
+                <li>同意並了解使用者資訊的財產上權利由您與管理者共同擁有。</li>
+                <li>未經同意，您不得直接或間接向第三人揭露您的使用者資訊或允許任何第三人接觸或使用您的使用者資訊。</li>
+              </ul><br>
+              <p>6. 尊重每個人</p>
+              <ul>
+                <li>我們希望為您提供安全的購物環境，所以希望你提供的商品對每個人都適合，這代表不能有低俗的書籍、散播仇恨的訊息或是不存在之商品等。在二手書拍賣網站下，我們希望買賣市場中的所有人都能友善對待彼此並尊重對方。</li>
+              </ul><br><br>
+              <p>我們致力為您提供更順暢的交易體驗！</p>
+            </div>
+          </div>
+        <style>
+            .con {
+                width: 80%;
+                margin: 50px auto;
+                padding: 20px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+              }
+            
+              .text {
+                text-align: center;
+                color: #333;
+                font-size: 24px;
+                line-height: 1.5;
+              }
+
+              .alltext {
+                font-size: 20px;
+                padding: 0px 200px;
+              }
+        </style>
+    </section>
+    <footer>
+      <div class="footer0">
+        <br>
+        <h1>我家二手書</h1>
+      </div>
+      <div class="footer1 ">
+        Connect with us at<div class="social-media">
+          <a href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a href="https://www.youtube.com/channel/UCsRDgUHk8wOoOzCuLoasiVQ">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+          <a href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <div class="footer3">│國防大學管理學院 │ 臨時服務專線：0932490814 │ 電話: 02-2898-3772 │<br>
+        │地址：112臺北市北投區中央北路二段70號 (復興崗校區) │ </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="../static/js/123.js"></script>
+  
+  </body>
+  
+  </html>

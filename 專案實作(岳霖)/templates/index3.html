@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  	<title>會員登入</title>
+  	<meta charset="UTF-8">
+  	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"/>
+  	
+  	<link rel="stylesheet" href="../static/css/reset.css">
+	<link rel="stylesheet" href="../static/css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+	<div class="loginbackground">
+		<div class="component">
+			<ul class="align">
+				<li>
+					<figure class='book'>
+
+						<!-- Front -->
+
+						<ul class='hardcover_front'>
+							<li>
+								<div class="coverDesign blue">
+									<img class="emblem" src="../static/images/院徽.png" alt="院徽">
+								</div>
+							</li>
+							<li></li>
+						</ul>
+
+						<!-- Pages -->
+
+						<ul class='page'>
+							<li></li>
+							<li>
+								<button class="btn" id="listBtn" onclick="listBtn()" href="#">登入/註冊</button>
+							</li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+
+						<!-- Back -->
+
+						<ul class='hardcover_back'>
+							<li></li>
+							<li></li>
+						</ul>
+						<ul class='book_spine'>
+							<li></li>
+							<li></li>
+						</ul>
+								
+					</figure>
+				</li>
+			</ul>
+		</div>
+	
+		<div class="login-wrap" id="textlistn">
+			<div class="login-html">
+				<h1 class="text">歡迎來到二手書網</h1>
+				<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">登入</label>
+				<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">註冊</label>
+				<div class="login-form">
+				<div class="sign-in-htm">
+					<div class="group">
+						<form action="/signin" method="POST">
+							學號<input type="text" name="nickname"/>
+							<div class="form-item">
+								密碼
+								<div class="input-wrapper">
+								<input type="password" id="password" name="password"/>
+								<button type="button" id="eyeball">
+									<div class="eye"></div>
+								</button>
+								<div id="beam"></div>
+								</div>
+							</div>
+							<br/>
+							<button class="button">登入</button>
+						</form>
+					
+						
+					</div>
+					<div class="hr"></div>
+					<div class="foot-lnk">
+						<button id="forgotPasswordBtn" class="forgot">忘記密碼?</button>
+						<style>
+							.forgot {
+								padding: 10px 20px;
+								background-color: #007bff;
+								color: white;
+								border: none;
+								border-radius: 5px;
+								cursor: pointer;
+								font-size: 16px;
+							}
+							
+							forgot:hover {
+								background-color: #0056b3;
+							}
+						
+							.modal {
+								background-color: white;
+								padding: 20px;
+								border-radius: 10px;
+								box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+								max-width: 400px;
+								width: 100%;
+							}
+							
+							.modal h2 {
+								margin-top: 0;
+								margin-bottom: 20px;
+								text-align: center;
+							}
+							
+							.modal input {
+								width: calc(100% - 20px);
+								padding: 10px;
+								margin-bottom: 20px;
+								box-sizing: border-box;
+								border: 1px solid #ccc;
+								border-radius: 5px;
+								font-size: 16px;
+							}
+							
+							.modal button {
+								width: 100%;
+								padding: 10px;
+								background-color: #007bff;
+								color: white;
+								border: none;
+								border-radius: 5px;
+								cursor: pointer;
+								font-size: 16px;
+							}
+							
+							.modal button:hover {
+								background-color: #0056b3;
+							}
+						</style>
+						<div id="forgotPasswordModal" class="modal" style="display: none;">
+							<form action="/forgot" method="POST">
+							<h2>忘記密碼</h2>
+							<input type="text" id="email" placeholder="請輸入您的學號" name="nickname">
+							<input type="email" id="email" placeholder="請輸入您的電子郵件" name="email">
+							<button id="sendVerificationBtn">發送驗證郵件</button>
+							</form>
+						</div>
+						
+						<script>
+							const forgotPasswordBtn = document.getElementById('forgotPasswordBtn');
+							const forgotPasswordModal = document.getElementById('forgotPasswordModal');
+							const sendVerificationBtn = document.getElementById('sendVerificationBtn');
+						
+							forgotPasswordBtn.addEventListener('click', function() {
+								forgotPasswordModal.style.display = 'block';
+							});
+						
+							sendVerificationBtn.addEventListener('click', function() {
+								const email = document.getElementById('email').value;
+								// 在这里添加发送验证邮件的逻辑
+								alert('已向 ' + email + ' 發送驗證郵件');
+								// 关闭模态框
+								forgotPasswordModal.style.display = 'none';
+							});
+						</script>
+					</div>
+				</div>
+				
+				<div class="sign-up-htm">
+					<div class="group">
+						<form action="/signup" method="POST">
+							學號<input type="text" name="nickname" /><br/>
+							密碼<input type="password" name="password" /><br/>			
+							電子信箱<input type="text" name="email" /><br/><br/>
+							<input type="hidden" name="grade" value=" ">
+                			<input type="hidden" name="department" value=" ">
+							
+							<button class="button">註冊</button>
+						</form>
+				
+					</div>
+					<div class="hr"></div>
+					<div class="foot-lnk">
+						<label for="tab-1">已經有註冊過?</a>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script  src="../static/js/sign.js"></script>
+<div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+</body>
+<script  src="../static/js/sign.js"></script>
+</html>

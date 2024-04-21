@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>可滾動的頁面</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .container {
+        display: flex;
+        height: 100%;
+    }
+
+    .left {
+        width: 50%;
+        background-color: lightgray;
+    }
+
+    .right {
+        width: 50%;
+        background-color: lightblue;
+        overflow-y: auto; /* 將 overflow 設置為 auto 以啟用垂直滾動條 */
+    }
+
+    .content {
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>左側區塊</h2>
+            <p>這是左側的內容。</p>
+        </div>
+        <div class="right">
+            <div class="content">
+                <h2>右側區塊</h2>
+                <p>這是右側的內容。</p>
+                <!-- 這裡放入更多內容以測試滾動效果 -->
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+                <p>放入更多內容以測試滾動效果</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

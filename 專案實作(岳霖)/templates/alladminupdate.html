@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>修改會員資料</title>
+  <link rel="stylesheet" href="../static/css/alladminupdate.css">
+</head>
+<body>
+    
+    <div class="signupFrm" action="/alladminupdate" method="GET">
+        
+        <form action="/adminupdate" class="form" method="POST">
+            
+            <h4 class="title">修改會員資料</h4>
+            <div class="inputContainer">
+                <input type="text" class="input" value={{users.nickname}} name="nickname">
+                <label for="" class="label">學號</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" name="department" value={{users.department}}>
+                <label for="" class="label">科系</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" name="grade" value={{users.grade}} >
+                <label for="" class="label">年級</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" name="password" value={{users.password}}>
+                <label for="" class="label">密碼</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" value={{users.email}} name="email">
+                <label for="" class="label">電子信箱</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" value={{users.status}} name="status">
+                <label for="" class="label">上線狀況</label>
+            </div>
+            
+            <input type="hidden" name="_id" value="{{ users._id }}"><br>
+            <button class="submitBtn" type="submit"> 送出 </button>   
+        </form>
+    </div>
+    <script src="../static/js/sell.js"></script>
+</body>
+</html>

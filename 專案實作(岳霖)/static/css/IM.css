@@ -1,0 +1,971 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    
+    
+    position: relative;
+    background-size:contain;
+  }
+
+  
+  header {
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background: rgb(39, 128, 146);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+
+  
+
+
+  .heading ul {
+    display: flex;
+    
+  }
+
+  .logo a {
+    color: white;
+    transition-duration: 1s;
+    font-weight: 800;
+  }
+  .logo a:hover {
+    color: rgb(240, 197, 6);
+    transition-duration: 1s;
+  }
+  .heading ul li {
+    list-style: none;
+  }
+  .heading ul li a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    color: white;
+    margin: 2px 14px;
+    font-size: 18px;
+    transition-duration: 1s;
+    
+  }
+  .heading ul li a:active {
+    color: red;
+  }
+  .heading ul li a:hover {
+    color: rgb(243, 168, 7);
+    transition-duration: 1s;
+  }
+  
+  .heading ul li a::before {
+    content: "";
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    transition-duration: 1s;
+  }
+  .heading ul li a:hover::before {
+    width: 100%;
+    transition-duration: 1s;
+    background-color: rgb(243, 168, 7);
+  }
+  #input {
+    height: 30px;
+    width: 400px;
+    text-decoration: none;
+    border: 0px;
+    padding: 5px;
+  }
+  .logo a {
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  ion-icon {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+  }
+  ion-icon:hover {
+    cursor: pointer;
+  }
+  .search a {
+    display: flex;
+  }
+  .searchb {
+    border: 2px solid #fff; /* 有顏色的邊框 */
+    background-color: transparent; /* 透明的背景色 */
+    color: #fff; /* 文本和邊框的顏色 */
+    padding: 6px 20px; /* 內邊距 */
+    text-align: center; /* 文本居中 */
+    text-decoration: none; /* 取消文本下劃線 */
+    display: inline-block; /* 行內塊級元素 */
+    font-size: 15px; /* 字體大小 */
+    margin: 4px 2px; /* 外邊距 */
+    transition-duration: 0.4s; /* 過渡效果持續時間 */
+    cursor: pointer; /* 指針應該顯示為指示可以單擊某些元素的小手 */
+    border-radius: 8px; /* 圓角 */
+  }
+  header a ion-icon {
+    position: relative;
+    right: 3px;
+  }
+  
+  .heading1 {
+    opacity: 0;
+  }
+  .search {
+    display: flex;
+    position: relative;
+  }
+  .section2 .container {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto;
+  }
+  .section2 .container .items {
+    
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border: 2.5px solid black;
+    border-radius: 12px;
+  }
+  .section2 .container .items .name {
+    text-align: center;
+    background-color: rgb(240, 197, 6);
+    height: 25px;
+    padding-top: 4px;
+    color: white;
+    margin: 0;
+  }
+  .section2 .container .items .price {
+    float: left;
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    color: rgb(255, 0, 0);
+    font-weight: 650;
+  }
+  .section2 .container .items .info {
+    padding-left: 10px;
+    color: rgb(243, 168, 7);
+  }
+  .section2 .container .items .img img {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;
+    transition-duration: 0.8s;
+  }
+  .section2 .container .items .img {
+    overflow: hidden;
+    margin: 0;
+  }
+  .section2 .container .items:hover {
+    transform: scale(1.2);
+    transition-duration: 0.8s;
+    border-radius: 20px;
+    box-shadow:  0 0 50px #eece51;
+    border-color: #eece51;
+    
+  }
+
+  .section2 .container .items .moreinfo {
+    
+    width: 500px;
+    height: 700px;
+    background-color: white;
+    border-radius: 12px;
+    z-index: 10;
+    
+  }
+
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #39919F;
+    align-items: center;
+    color: white;
+  }
+  
+  .footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 15px;
+  }
+  .social-media {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+  }
+  .social-media a {
+    color: white;
+    margin: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+  }
+  .social-media a ion-icon {
+    color: white;
+    background-color: #39919F;
+  }
+  .social-media a:hover ion-icon {
+    color: rgb(243, 168, 7);
+    transform: translateY(5px);
+  }
+  .footer0 {
+    font-weight: 1200;
+    transition-duration: 1s;
+  }
+  .footer0:hover {
+    color: rgb(243, 168, 7);
+  }
+  .footer3 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer3 h4 {
+    margin: 0 10px;
+  }
+  .menu {
+    visibility: hidden;
+  }
+  .heading1 .ham:active {
+    color: red;
+  }
+  .items {
+    overflow: hidden;
+  }
+  .ham,
+  .close {
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 1250px) {
+    .heading ul li {
+      display: none;
+    }
+  
+    .items {
+      transform: scale(0.9);
+    }
+    .img-slider img {
+      height: 60vw;
+      width: 80vw;
+    }
+    .ham:active {
+      color: red;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu a ion-icon {
+      position: absolute;
+    }
+  
+    @keyframes slide1 {
+      0% {
+        left: 0vw;
+      }
+      15% {
+        left: 0vw;
+      }
+      20% {
+        left: -80vw;
+      }
+      32% {
+        left: -80vw;
+      }
+      35% {
+        left: -160vw;
+      }
+      47% {
+        left: -160vw;
+      }
+      50% {
+        left: -240vw;
+      }
+      63% {
+        left: -240vw;
+      }
+      66% {
+        left: -320vw;
+      }
+      79% {
+        left: -320vw;
+      }
+      82% {
+        left: -400vw;
+      }
+      100% {
+        left: 0vw;
+      }
+    }
+    .menu ul {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: 90vw;
+      height: 100vh;
+      background-color: black;
+      left: 0;
+      top: 0;
+      z-index: 11;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+    }
+    .close {
+      z-index: 34;
+  
+      color: white;
+      background-color: black;
+    }
+    .close:active {
+      color: red;
+    }
+    .menu ul li {
+      list-style: none;
+      margin: 20px;
+      border-top: 3px solid white;
+      width: 80%;
+      text-align: center;
+  
+      padding-top: 10px;
+    }
+    .menu ul li a {
+      text-decoration: none;
+      padding-top: 10px;
+      color: white;
+      font-weight: 900;
+    }
+    .menu ul li a:hover {
+      color: rgb(240, 197, 6);
+    }
+    .img-slider {
+      display: flex;
+      float: left;
+      position: relative;
+      width: 80%;
+      height: 60%;
+      animation-name: slide1;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      transition-duration: 2s;
+    }
+    .section1 {
+      width: 80%;
+      overflow: hidden;
+  
+      justify-content: center;
+      align-items: center;
+      margin: 0px auto;
+    }
+  
+    .heading1 {
+      opacity: 1;
+      position: relative;
+      bottom: 8px;
+    }
+    .search a {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  
+    .heading1 .ham {
+      background-color: black;
+      color: white;
+    }
+    #input {
+      width: 200px;
+      flex-shrink: 2;
+    }
+    header {
+      height: 150px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .heading ul li {
+      display: none;
+    }
+    .heading1 {
+      opacity: 1;
+  
+      bottom: 8px;
+    }
+  
+    header {
+      height: 250px;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+    }
+    #input {
+      width: 150px;
+    }
+    .close {
+      z-index: 34;
+    }
+  
+    .search a {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  @media (width >= 500px) {
+    .dropdown > button {
+      padding: 0 10px 0 24px;
+    }
+  }
+  
+  @media (width >= 500px) {
+    .dropdown:hover button {
+      opacity: 1;
+    }
+  }
+  
+  .dropdowns {
+    left: -9999px;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 50px;
+    background: #f5f5f8;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.3s;
+  }
+  
+  @media (width < 500px) {
+    body.open .dropdowns {
+      opacity: 1;
+      visibility: visible;
+      left: 0;
+    }
+  }
+  
+  @media (width >= 500px) {
+    .dropdowns {
+      position: static;
+      flex-direction: row;
+      justify-content: flex-start;
+      background: transparent;
+      opacity: 1;
+      visibility: visible;
+      padding-left: 0;
+    }
+  }
+  
+  .dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  @media (width >= 500px) {
+    .dropdown {
+      height: 100%;
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .dropdown-menu {
+      writing-mode: initial;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      display: flex;
+      gap: 32px;
+      padding: 12px 24px 20px;
+      margin-bottom: 0;
+      justify-content: flex-start;
+      background: rgb(39, 128, 146);
+      opacity: 0;
+      visibility: hidden;
+      translate: 0 24px;
+      transition: 0.3s;
+      height: 256px;
+    }
+  
+    .dropdown:hover {
+      background: rgb(39, 128, 146);
+    }
+  
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      translate: 0 0;
+      
+    }
+  }
+  
+  .dropdown-menu button {
+    background: rgb(39, 128, 146);
+    border: none;
+    display: block;
+    width: 100%;
+    color: #fff;
+    opacity: 1;
+    height: 40px;
+    text-align: left;
+    white-space: nowrap;
+    
+  }
+  
+  @media (width >= 500px) {
+    .dropdown-menu button {
+      opacity: 0.6;
+    }
+  
+    .dropdown:hover .button {
+      opacity: 1;
+    }
+  }
+  
+  .dropdown-menu button:hover {
+    opacity: 1;
+  }
+
+  .bur {
+    position: relative;
+  }
+  .nosee {
+    display: none;
+  }
+  .bur:hover .nosee{
+    display: block;
+    position: absolute;
+    visibility: visible;
+    top: -92px;
+    left: 100px;
+    color: #fff;
+    font-size: .8em;
+    background: rgb(39, 128, 146);
+    padding: 11px 50px 5px;
+    z-index: -1;
+  }
+
+
+
+  .product-wrapper {
+    z-index: 20;
+    display: none;
+    position: absolute;
+    left: 25%;
+    margin: auto;
+    height: 420px;
+    width: 654px;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-img {
+    float: left;
+    height: 420px;
+    width: 327px;
+  }
+  
+  .product-img img {
+    border-radius: 7px 0 0 7px;
+  }
+  
+  .product-info {
+    float: left;
+    height: 420px;
+    width: 327px;
+    border-radius: 0 7px 10px 7px;
+    background-color: #ffffff;
+  }
+  
+  .product-text {
+    height: 300px;
+    width: 327px;
+  }
+  
+  .product-text h1 {
+    margin: 0 0 0 38px;
+    padding-top: 52px;
+    font-size: 34px;
+    color: #474747;
+  }
+  
+  .product-text h1,
+  .product-price-btn p {
+    font-family: 'Bentham', serif;
+  }
+  
+  .product-text h2 {
+    margin: 0 0 47px 38px;
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    letter-spacing: 0.2em;
+  }
+  
+  .product-text p {
+    height: 125px;
+    margin: 0 0 0 38px;
+    font-family: 'Playfair Display', serif;
+    color: #8d8d8d;
+    line-height: 1.7em;
+    font-size: 15px;
+    font-weight: lighter;
+    overflow: hidden;
+  }
+  
+  .product-price-btn {
+    height: 103px;
+    width: 327px;
+    margin-top: 17px;
+    position: relative;
+  }
+  
+  .product-price-btn p {
+    display: inline-block;
+    position: absolute;
+    top: -13px;
+    height: 50px;
+    font-family: 'Trocchi', serif;
+    margin: 0 0 0 38px;
+    font-size: 28px;
+    font-weight: lighter;
+    color: #474747;
+  }
+  
+  span {
+    display: inline-block;
+    height: 50px;
+    font-family: 'Suranna', serif;
+    font-size: 34px;
+  }
+  
+  .product-price-btn button {
+    
+    display: inline-block;
+    height: 50px;
+    width: 176px;
+    margin: 0 40px 0 16px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #9cebd5;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .product-price-btn button:hover {
+    background-color: #79b0a1;
+  }
+
+
+
+
+  
+
+  body {
+    background-color: #278092;/*背景色設定*/
+    margin: 0px;
+    font-family: "微軟正黑體", "Arial Unicode MS";
+  }
+  /* CSS Document */
+  
+  #wrapper {
+    width: 900px;   /*寬度設定為900px*/
+    margin: auto;   /*版面居中對齊*/
+    border: 2px solid #DEECDF;
+          }
+  
+  #header {
+    background-image: url(images/header01.jpg);
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+          }
+  
+  #button {
+    /*高度設定*/
+    height: 22px;
+    
+    /*文字設定*/
+    font-weight: bolder;
+    color: #FFF;
+    font-size: 14px;
+    
+    /*背景色設定*/
+      background-color:#6E6E6E;
+      
+    /*將內定的邊距清除*/
+    margin: 0px;
+    
+    /*將內定的內距清除*/
+    padding:0px;
+          }
+      
+  #button li {
+      /* 讓各個清單元素靠左對齊 */
+      float:left;
+    /* 設定清單文字範圍的寬度 */
+      width:178px;
+    
+    /* 去除清單文字前面的小點*/
+      list-style-type:none;
+    
+    /* 設定背景色 */
+      background-color:#6E6E6E;
+    
+    /* 讓清單文字居中對齊 */
+      text-align:center;
+    
+    /* 設定字距為2px */
+    letter-spacing: 2px;
+    
+    /* 設定左邊的白邊樣式 */
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #FFF;
+    
+    /* 右邊留白1像素 */
+      margin-right:1px;
+  
+  }
+      
+  #button li a {
+    /* 連結範圍充滿整個區塊 */
+      display: block;
+    
+    /* 單個連結範圍的框度和高度*/
+    width: 180px;
+    height:20px;
+    
+      /* 連結範圍向上的內距 */
+    padding-top:2px;
+    
+    /* 連結的文字設為白色以及無裝飾(無底線) */
+    color: #FFF;
+    text-decoration: none;
+  }
+  
+  
+  #button li a:hover{
+      /* 設定滑鼠移過時，清單改變的底色設定 */
+    background-color:#39919F
+  }
+  
+  
+  #content {
+    font-size: 14px;
+    line-height: 2em;
+    color: #333;
+    background-color: #DEF1ED;
+    padding: 30px;
+  
+                  }
+  
+  
+  #footer {
+    background-image: url(images/header01.jpg);
+    background-repeat: no-repeat;
+    font-size: 12px;
+    line-height: 1.5em;
+    color: #FFF;
+    padding: 15px;
+  
+  
+           }
+  
+  h1{
+    color: #FFF;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 30px;
+    margin: 0px;	
+  }
+  h4 {
+    font-size: 13px;
+    font-weight: bolder;
+    color: #6365AB;
+    border-left-width: 5px;
+    border-left-style: dotted;
+    border-left-color: #5E6174;
+    padding-left: 5px;
+  }
+  #content table tr td a {
+    color: #2F829D;
+    text-decoration: underline;
+  }
+  #content table tr td a:hover {
+    color: #936;
+    text-decoration: none;
+  }
+  
+  
+  h2 {
+    font-size: 150%;
+    font-weight: bolder;
+    color: #1E6488;
+    padding-left: 5px;
+    border-bottom-width: 1px;
+    border-left-width: 1em;
+    border-bottom-style: dashed;
+    border-left-style: solid;
+    border-bottom-color: #1E6488;
+    border-left-color: #59ADDB;
+    background-color: #ABDCD2;
+    border-top-width: 1px;
+    border-top-style: dashed;
+    border-top-color: #1E6488;
+  }
+  #content ul li {
+    list-style-image: url(images/arrow_c.jpg);
+  }
+  
+  
+  
+  .header-text {
+    font-size: 15px;
+    color: #D2EFF7;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bolder;
+    font-style: italic;
+    margin: 0px;
+  }
+  #content table tr td {
+    font-size: 12px;
+    line-height: 1.5em;
+    padding: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #2F829D;
+  }
+  #content table {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #2F829D;
+  }
+  #content table caption {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #2F829D;
+    background-color: #C4E6DF;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #2F829D;
+  }
+  
+  #content table tr th {
+    font-size: 12px;
+    font-weight: bolder;
+    color: #FFF;
+    background-color: #2F829D;
+  }
+  
+  .submitBtn {
+      display: block;
+      margin-left: auto;
+      padding: 15px 30px;
+      border: none;
+      background-color: #2F829D;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 30px;
+    }
+  
+  .submitBtn:hover {
+      background-color: #C4E6DF;
+      transform: translateY(-2px);
+  }
+
+
+
+
+
+  .section2 .container .items .overlay {
+    display: none;
+    position: absolute;
+    float: left;
+    top: 200px;
+    width: 100%;
+    height: 33%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .section2 .container .items:hover .overlay {
+    display: flex;
+    
+  }
+
+  .section2 .container .items .submit-button {
+    border: 2px solid #eece51; /* 有顏色的邊框 */
+    background-color: transparent; /* 透明的背景色 */
+    color: #eece51; /* 文本和邊框的顏色 */
+    padding: 6px 20px; /* 內邊距 */
+    text-align: center; /* 文本居中 */
+    text-decoration: none; /* 取消文本下劃線 */
+    display: inline-block; /* 行內塊級元素 */
+    font-size: 16px; /* 字體大小 */
+    margin: 4px 2px; /* 外邊距 */
+    transition-duration: 0.4s; /* 過渡效果持續時間 */
+    cursor: pointer; /* 指針應該顯示為指示可以單擊某些元素的小手 */
+    border-radius: 8px; /* 圓角 */
+    bottom: 10px;
+  }
+  
+  /* 悬停時的樣式 */
+  .section2 .container .items .submit-button:hover {
+    background-color: #eece51; /* 鼠標懸停時填充顏色 */
+    color: white; /* 鼠標懸停時文字顏色 */
+  }
+
+
+

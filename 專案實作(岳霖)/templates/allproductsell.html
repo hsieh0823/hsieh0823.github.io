@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>上傳書籍</title>
+  <link rel="stylesheet" href="../static/css/sellstly.css">
+</head>
+<body>
+    
+    <div class="signupFrm">
+        
+        <form action="/allproductadd" class="form" method="POST">
+            
+            <h4 class="title">上傳書本資料</h4>
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="studentID">
+                <label for="" class="label">學號</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="productname">
+                <label for="" class="label">書名</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="productAuthor">
+                <label for="" class="label">作者</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="productpress">
+                <label for="" class="label">出版社</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="productISBN">
+                <label for="" class="label">ISBN</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="productdescribe">
+                <label for="" class="label">書本狀態</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="productprice">
+                <label for="" class="label">價格</label>
+            </div>
+
+            <div class="inputContainer">
+                <select type="text" class="input" placeholder="a" name="producttype">
+                    <option>請選擇該書的類型</option>
+                    <option>資管系</option>
+                    <option>法律系</option>
+                    <option>運籌系</option>
+                    <option>財管系</option>
+                    <option>通識課程</option>
+                    <option>其他</option>
+                </select>
+                <label for="" class="label">書籍類型</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="productcall">
+                <label for="" class="label">聯絡方式</label>
+            </div>
+            
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="productimage">
+                <label for="" class="label">書籍圖片網路連結</label>
+                
+            </div><button class="submitBtn"> 送出 </button>   
+        </form>
+    </div>
+    <script src="../static/js/sell.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>會員中心</title>
+  <link rel="stylesheet" href="../static/css/admin.css" media="screen">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+function MM_openBrWindow(theURL,winName,features) {
+  window.open(theURL,winName,features);
+}
+</script>
+</head>
+<body>
+<div id="wrapper"> 
+  <div id="header">
+    <h1> <strong>會員中心</strong></h1>
+    <strong class="header-text">歡迎來到屬於你的會員專區</strong></div>
+  
+  <ul id="button">
+          <li><a href="/product">首頁</a></li>
+          <li><a href="/admin">會員中心</a></li>
+          <li><a href="/mylove">我的最愛</a></li>
+          <li><a href="/my4boss">我4頭家</a></li>
+          <li><a href="/signout">登出</a></li>
+  </ul>
+  
+  <div id="content">
+    <h2>您的資料 </h2>
+    <table class="member-table" action="/admin" method="GET">
+      <tr>
+          <th>學號</th>
+          <th>科系</th>
+          <th>年級</th>
+          <th>密碼</th>
+          <th>電子信箱</th>
+      </tr>
+      <tr>
+          <td>{{member.nickname}}</td>
+          <td>{{member.department}}</td>
+          <td>{{member.grade}}</td>
+          <td>{{member.password}}</td>
+          <td>{{member.email}}</td>
+      </tr>
+  </table>
+
+    <p>&nbsp;</p>
+    <button class="submitBtn"><a class="words" href="/changeadmin" style="color: #fff;text-decoration: none;">更改資料</a></button>
+  </div>
+  
+  <div id="footer">
+  │國防大學管理學院 │ 臨時服務專線：0932490814 │ 電話: 02-2898-3772 │<br>
+  │地址：112臺北市北投區中央北路二段70號 (復興崗校區) │ </div>
+</div>
+</body>
+</html>

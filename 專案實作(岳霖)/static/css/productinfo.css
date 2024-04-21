@@ -1,0 +1,548 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f7; /* 淡绿色背景 */
+    margin: 0;
+    padding: 0;
+  }
+
+
+  header {
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background: rgb(38, 35, 222);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+
+  
+
+
+  .heading ul {
+    display: flex;
+    
+  }
+
+  .logo a {
+    color: white;
+    transition-duration: 1s;
+    font-weight: 800;
+  }
+  .logo a:hover {
+    color: rgb(240, 197, 6);
+    transition-duration: 1s;
+  }
+  .heading ul li {
+    list-style: none;
+  }
+  .heading ul li a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    color: white;
+    margin: 2px 14px;
+    font-size: 18px;
+    transition-duration: 1s;
+    
+  }
+  .heading ul li a:active {
+    color: red;
+  }
+  .heading ul li a:hover {
+    color: rgb(243, 168, 7);
+    transition-duration: 1s;
+  }
+  
+  .heading ul li a::before {
+    content: "";
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    transition-duration: 1s;
+  }
+  .heading ul li a:hover::before {
+    width: 100%;
+    transition-duration: 1s;
+    background-color: rgb(243, 168, 7);
+  }
+  #input {
+    height: 30px;
+    width: 400px;
+    text-decoration: none;
+    border: 0px;
+    padding: 5px;
+  }
+  .logo a {
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  ion-icon {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+  }
+  ion-icon:hover {
+    cursor: pointer;
+  }
+  .search a {
+    display: flex;
+  }
+  .searchb {
+    border: 2px solid #fff; /* 有顏色的邊框 */
+    background-color: transparent; /* 透明的背景色 */
+    color: #fff; /* 文本和邊框的顏色 */
+    padding: 6px 20px; /* 內邊距 */
+    text-align: center; /* 文本居中 */
+    text-decoration: none; /* 取消文本下劃線 */
+    display: inline-block; /* 行內塊級元素 */
+    font-size: 15px; /* 字體大小 */
+    margin: 4px 2px; /* 外邊距 */
+    transition-duration: 0.4s; /* 過渡效果持續時間 */
+    cursor: pointer; /* 指針應該顯示為指示可以單擊某些元素的小手 */
+    border-radius: 8px; /* 圓角 */
+  }
+  header a ion-icon {
+    position: relative;
+    right: 3px;
+  }
+  
+  
+
+  .slider {
+    position: relative;
+    width: 350px;
+    margin: 50px auto;
+    perspective: 1000px;
+    padding-top: 120px;
+    }
+    .rotator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 55%;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: roter 29s linear infinite;
+    }
+    .rotator:hover {
+    animation-play-state: paused;
+    }
+    @keyframes roter {
+    from {
+    transform: rotateY(0deg);
+    }
+    to {
+    transform: rotateY(360deg);
+    }
+    }
+    .heading1 {
+        opacity: 0;
+      }
+      .search {
+        display: flex;
+        position: relative;
+      }
+    
+      .menu {
+        visibility: hidden;
+      }
+      .heading1 .ham:active {
+        color: red;
+      }
+      .items {
+        overflow: hidden;
+      }
+      .ham,
+      .close {
+        cursor: pointer;
+      }
+      
+      @media screen and (max-width: 1250px) {
+        .heading ul li {
+          display: none;
+        }
+      
+        .items {
+          transform: scale(0.9);
+        }
+        .img-slider img {
+          height: 60vw;
+          width: 80vw;
+        }
+        .ham:active {
+          color: red;
+        }
+        .menu {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .menu a ion-icon {
+          position: absolute;
+        }
+      
+        @keyframes slide1 {
+          0% {
+            left: 0vw;
+          }
+          15% {
+            left: 0vw;
+          }
+          20% {
+            left: -80vw;
+          }
+          32% {
+            left: -80vw;
+          }
+          35% {
+            left: -160vw;
+          }
+          47% {
+            left: -160vw;
+          }
+          50% {
+            left: -240vw;
+          }
+          63% {
+            left: -240vw;
+          }
+          66% {
+            left: -320vw;
+          }
+          79% {
+            left: -320vw;
+          }
+          82% {
+            left: -400vw;
+          }
+          100% {
+            left: 0vw;
+          }
+        }
+        .menu ul {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          width: 90vw;
+          height: 100vh;
+          background-color: black;
+          left: 0;
+          top: 0;
+          z-index: 11;
+          align-items: center;
+          justify-content: center;
+          opacity: 1;
+        }
+        .close {
+          z-index: 34;
+      
+          color: white;
+          background-color: black;
+        }
+        .close:active {
+          color: red;
+        }
+        .menu ul li {
+          list-style: none;
+          margin: 20px;
+          border-top: 3px solid white;
+          width: 80%;
+          text-align: center;
+      
+          padding-top: 10px;
+        }
+        .menu ul li a {
+          text-decoration: none;
+          padding-top: 10px;
+          color: white;
+          font-weight: 900;
+        }
+        .menu ul li a:hover {
+          color: rgb(240, 197, 6);
+        }
+        .img-slider {
+            display: flex;
+            float: left;
+            position: relative;
+            width: 80%;
+            height: 60%;
+            animation-name: slide1;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            transition-duration: 2s;
+          }
+          .section1 {
+            width: 80%;
+            overflow: hidden;
+        
+            justify-content: center;
+            align-items: center;
+            margin: 0px auto;
+          }
+        
+          .heading1 {
+            opacity: 1;
+            position: relative;
+            bottom: 8px;
+          }
+          .search a {
+            display: flex;
+            flex-wrap: nowrap;
+          }
+        
+          .heading1 .ham {
+            background-color: black;
+            color: white;
+          }
+          #input {
+            width: 200px;
+            flex-shrink: 2;
+          }
+          header {
+            height: 150px;
+          }
+        }
+        @media screen and (max-width: 550px) {
+          .heading ul li {
+            display: none;
+          }
+          .heading1 {
+            opacity: 1;
+        
+            bottom: 8px;
+          }
+        
+          header {
+            height: 250px;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;
+          }
+          #input {
+            width: 150px;
+          }
+          .close {
+            z-index: 34;
+          }
+        
+          .search a {
+            display: flex;
+            flex-wrap: nowrap;
+          }
+        }
+      
+        @media (width >= 500px) {
+          .dropdown > button {
+            padding: 0 10px 0 24px;
+          }
+        }
+        
+        @media (width >= 500px) {
+          .dropdown:hover button {
+            opacity: 1;
+          }
+        }
+        
+        .dropdowns {
+          left: -9999px;
+          z-index: 2;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          padding-left: 50px;
+          background: #f5f5f8;
+          opacity: 0;
+          visibility: hidden;
+          transition-property: opacity, visibility;
+          transition-duration: 0.3s;
+        }
+        
+        @media (width < 500px) {
+          body.open .dropdowns {
+            opacity: 1;
+            visibility: visible;
+            left: 0;
+          }
+        }
+        
+        @media (width >= 500px) {
+          .dropdowns {
+            position: static;
+            flex-direction: row;
+            justify-content: flex-start;
+            background: transparent;
+            opacity: 1;
+            visibility: visible;
+            padding-left: 0;
+          }
+        }
+        
+        .dropdown {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+        
+        @media (width >= 500px) {
+          .dropdown {
+            height: 100%;
+            flex-direction: row;
+            align-items: center;
+          }
+        
+          .dropdown-menu {
+            writing-mode: initial;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            display: flex;
+            gap: 32px;
+            padding: 12px 24px 20px;
+            margin-bottom: 0;
+            justify-content: flex-start;
+            background: #2a1262;
+            opacity: 0;
+            visibility: hidden;
+            translate: 0 24px;
+            transition: 0.3s;
+            height: 256px;
+          }
+        
+          .dropdown:hover {
+            background: #2a1262;
+          }
+        
+          .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            translate: 0 0;
+            
+          }
+        }
+        
+        .dropdown-menu button {
+          background-color: #2a1262;
+          border: none;
+          display: block;
+          width: 100%;
+          color: #fff;
+          opacity: 1;
+          height: 40px;
+          text-align: left;
+          white-space: nowrap;
+          
+        }
+        
+        @media (width >= 500px) {
+          .dropdown-menu button {
+            opacity: 0.6;
+          }
+        
+          .dropdown:hover .button {
+            opacity: 1;
+          }
+        }
+        
+        .dropdown-menu button:hover {
+          opacity: 1;
+        }
+      
+        .bur {
+          position: relative;
+        }
+        .nosee {
+          display: none;
+        }
+        .bur:hover .nosee{
+          display: block;
+          position: absolute;
+          visibility: visible;
+          top: -92px;
+          left: 100px;
+          color: #fff;
+          font-size: .8em;
+          background: rgb(39, 128, 146);
+          padding: 11px 50px 5px;
+          z-index: -1;
+        }
+
+
+
+
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+
+          .productimg{
+            float: right;
+          }
+
+          h1, h2, h3 {
+            margin-bottom: 10px;
+          }
+        
+          p {
+            margin: 5px 0;
+          }
+        
+          .info {
+            margin-bottom: 20px;
+          }
+        
+          .info label {
+            font-weight: bold;
+          }
+        
+          .price {
+            font-size: 24px;
+            color: #278092; 
+            margin-top: 20px;
+          }
+          .favorite-btn {
+            background-color: #278092; 
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
+        
+          .favorite-btn:hover {
+            background-color: #039483; 
+          }
+        
+          
+        
+          
+      

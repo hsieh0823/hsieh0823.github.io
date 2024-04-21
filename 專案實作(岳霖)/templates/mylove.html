@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>我的最愛</title>
+  <link rel="stylesheet" href="../static/css/my4boss.css" media="screen">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+function MM_openBrWindow(theURL,winName,features) {
+  window.open(theURL,winName,features);
+}
+</script>
+</head>
+<body>
+<div id="wrapper"> 
+  <div id="header">
+    <h1> <strong>我的最愛</strong></h1>
+    <strong class="header-text">這裡會出現你中意的書籍</strong></div>
+  
+  <ul id="button">
+          <li><a href="/product">首頁</a></li>
+          <li><a href="/admin">會員中心</a></li>
+          <li><a href="/my4boss">我4頭家</a></li>
+          <li><a href="/caption">購買規定</a></li>
+          <li><a href="/signout">登出</a></li>
+  </ul>
+  
+  <div id="content">
+    <h2>我的最愛 </h2>
+    <p>歡迎來到"我的最愛"，在這裡您可以做以下幾點事項:</p>
+    <ul>
+      <li>查看這些商品的詳情。</li>
+      <li>可以將商品從我的最愛中移除。</li>
+      <li>如想購買，可以透過商品資訊向賣家聯絡。</li>
+    </ul>
+    <div style="overflow-y: auto; height: 550px;">
+    <table width="100%" border="0" cellspacing="0">
+        <caption>您的最愛一覽表</caption>
+          <tr>
+            <th width="25%">書籍</th>
+            <th width="75%">說明</th>
+          </tr>
+        {% for love in loves %}
+        <tr action="/mylove" method="GET">
+          <form action="/mylovedelete" method="POST">
+            <td valign="top" name = "productimage"><img src={{love.productimage}} alt="Python" width="180" height="160"></td>
+            <td valign="top"><h4>書 名 : {{love.productname}}</h4>
+              <p style="position: relative;">
+                <p >書 本 狀 態 ： {{love.productdescribe}}</p>
+                <p >價格 ： ${{love.productprice}}</p>
+                <p >聯 絡 方 式 ： {{love.productcall}}</p>
+                <input type="hidden" name="studentID" value="{{ love.studentID }}">
+                <input type="hidden" name="productname" value="{{ love.productname }}">
+                <input type="hidden" name="nickname" value="{{ love.nickname }}">
+                <button class="submitBtn1" style="color: #fff;">刪除</button>
+          </form>
+                <style>
+                .submitBtn1 {
+                  float: right;
+                  margin-right: auto;
+                  
+                  padding: 10px 20px;
+                  border: none;
+                  background-color: #2F829D;
+                  color: white;
+                  border-radius: 6px;
+                  cursor: pointer;
+                  font-size: 15px;
+                  margin-top: 30px;
+                }
+                .submitBtn1:hover {
+                  background-color: #C4E6DF;
+                  transform: translateY(-2px);
+                }
+              </style>
+              </p></td>
+          
+        </tr>
+        {% endfor %}
+    
+    </table>
+    </div>
+    <p>&nbsp;</p>
+    <table width="100%" border="0" cellspacing="0">
+    <caption>推薦書籍</caption>
+      <tr>
+        <th width="25%">中華民國憲法</th>
+        <th width="25%">python亡者歸來</th>
+        <th width="25%">JAVA</th>
+        <th width="25%">我向南逃</th>
+      </tr>
+      <tr>
+        <td><img width="190" height="210" src="https://s2.eslite.com/unsafe/fit-in/x900/s.eslite.com/upload/product/o/2682337458006/20230210031737446506.jpg" alt="items photo" /></td>
+        <td><img width="190" height="210" src="https://make9.tw/wp-content/uploads/python-book-recommend-5.jpg" /></td>
+        <td><img width="190" height="210" src="https://cs-d.ecimg.tw/items/DJAA2VA900A2IRL/000001_1560135612.jpg" /></td>
+        <td><img width="190" height="210" src="data:image/jpeg;base64,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" /></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    
+  </div>
+  
+  <div id="footer">
+  │國防大學管理學院 │ 臨時服務專線：0932490814 │ 電話: 02-2898-3772 │<br>
+  │地址：112臺北市北投區中央北路二段70號 (復興崗校區) │ </div>
+</div>
+</body>
+</html>

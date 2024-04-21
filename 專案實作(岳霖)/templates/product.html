@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>管理學院二手書網站</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/productstly.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  </head>
+  
+  
+  <body style="background-color: #DEF1ED;">
+  <header style="background-color: #278092;">
+    
+      <div class="logo">
+        <a href="/product"><img src="../static/images/real-estate.png"/></a>
+      
+      </div>
+      <div class="menu">
+        <a href="#">
+          <ion-icon name="close" class="close"></ion-icon>
+        </a>
+      </div>
+      <div class="search">
+        <form action="/search" method="POST">
+        <input type="text" placeholder="找啥" id="input" name="search">
+        <button class="searchb">
+          搜尋
+        </button>
+      </form>
+      </div>
+      
+      <div class="heading">
+        <ul>
+          <li>
+            <div class="dropdowns" style="background-color: #278092;">
+              <div class="dropdown" style="background-color: #278092;">
+                <a href="/administrator" >管理員入口</a>
+              </div>
+            </div>
+          </li>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="/caption" >購買規定</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="/Q_A" >Q&A</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="#" class="under"><img class="menuimg" src="../static/images/menu.png"  /></a>
+                  <div class="dropdown-menu" style="background-color: #278092;">
+                    <div style="background-color: #278092;">
+                      <button style="background-color: #278092;"><a href="/my4boss">我4頭家</a></button>
+                      <button style="background-color: #278092;"><a href="/mylove">我的最愛</a></button>
+                      <div class="bur" style="background-color: #278092;">
+                        <a href="#">分類</a>
+                        <div class="nosee" style="background-color: #278092;">
+                          <button style="background-color: #278092;"><a href="/IMproduct">資管系</a></button>
+                          <button style="background-color: #278092;"><a href="/Fin">財管系</a></button>
+                          <button style="background-color: #278092;"><a href="/LAW">法律系</a></button>
+                          <button style="background-color: #278092;"><a href="/logistics">運籌系</a></button>
+                          <button style="background-color: #278092;"><a href="/LibEdu">通識課程</a></button>
+                          <button style="background-color: #278092;"><a href="/other">其他</a></button>
+                        </div>
+                      </div>
+                      <button style="background-color: #278092;"><a href="/admin">會員中心</a></button>
+                      <button style="background-color: #278092;"><a href="/team">製作團隊</a></button>
+                      <button style="background-color: #278092;"><a href="/signout">登出</a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <div class="heading1">
+        <ion-icon name="menu" class="ham"></ion-icon>
+      </div>
+    
+  </header>
+    <section>
+      <div class="section">
+        <div class="section1">
+          <img src="../static/images/稻穗右.png" class="rightbackground" alt="background" />
+          <img src="../static/images/稻穗左.png" class="leftbackground" alt="background" />
+          <div class="slider">
+            <div class="rotator">
+               <div class="item">
+                  <img src="https://www.airitibooks.com/ABCUpLoad/9789866264375.jpg" alt="items photo" />
+               </div>
+               <div class="item">
+                  <img src="https://i4.momoshop.com.tw/1658775511/goodsimg/0009/451/812/9451812_R.webp" />
+               </div>
+               <div class="item">
+                  <img src="https://s.yimg.com/zp/MerchandiseImages/CF67302795-SP-6713845.jpg" alt="items photo" />
+               </div>
+               <div class="item">
+                  <img src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/086/51/0010865186_bc_01.jpg&v=5f1ab857k&w=280&h=280" alt="items photo" />
+               </div>
+               <div class="item">
+                  <img src="https://www.flag.com.tw/assets/img/bookpic/F7112.jpg" />
+               </div>
+               <div class="item">
+                  <img src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/083/05/0010830524.jpg&v=5d416dffk&w=348&h=348" alt="items photo" />
+               </div>
+               <div class="item">
+                  <img src="https://make9.tw/wp-content/uploads/book-html-1.jpeg" alt="items photo" />
+               </div>
+               <div class="item">
+                  <img src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/087/48/0010874876.jpg&v=5fbf91c4k&w=348&h=348" alt="items photo" />
+               </div>
+               <div class="item">
+                  <img src="https://www.flag.com.tw/assets/img/bookpic/F1469.jpg" alt="items photo" />
+               </div>
+            </div>
+         </div>
+  
+        </div>
+
+        <div class="section2">
+          <div class="container" action="/product" method="GET">
+            {% for product in products %}
+            <form id="myForm{{ loop.index }}" action="/productinfo" method="POST" class="product-form">
+              <div class="items">
+                <div class="img img1" name="productimage" style="margin: 0;padding: 0;"><img src="{{ product.productimage }}" alt="python"></div>
+                <div class="name" name="productname" value="{{ productname }}">{{ product.productname }}</div>
+                <div class="price" name="productprice">${{ product.productprice }}</div>
+                <div class="info" name="productdescribe">{{ product.productdescribe }}<br><p name="studentID" value="{{ studentID }}">賣家: {{ product.studentID }}</p></div>
+                <input type="hidden" name="studentID" value="{{ product.studentID }}">
+                <input type="hidden" name="productname" value="{{ product.productname }}">
+                <div class="overlay" style="align-items: center;justify-content: center;"><button type="submit" class="submit-button">詳情</button></div>
+                <style>
+                  .section2 .container .items .overlay {
+                    display: none;
+                    position: absolute;
+                    float: left;
+                    top: 200px;
+                    width: 100%;
+                    height: 33%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                  }
+                
+                  .section2 .container .items:hover .overlay {
+                    display: flex;
+                    
+                  }
+                
+                  .section2 .container .items .submit-button {
+                    border: 2px solid #eece51; /* 有顏色的邊框 */
+                    background-color: transparent; /* 透明的背景色 */
+                    color: #eece51; /* 文本和邊框的顏色 */
+                    padding: 6px 20px; /* 內邊距 */
+                    text-align: center; /* 文本居中 */
+                    text-decoration: none; /* 取消文本下劃線 */
+                    display: inline-block; /* 行內塊級元素 */
+                    font-size: 16px; /* 字體大小 */
+                    margin: 4px 2px; /* 外邊距 */
+                    transition-duration: 0.4s; /* 過渡效果持續時間 */
+                    cursor: pointer; /* 指針應該顯示為指示可以單擊某些元素的小手 */
+                    border-radius: 8px; /* 圓角 */
+                    bottom: 10px;
+                  }
+                  
+                  /* 悬停時的樣式 */
+                  .section2 .container .items .submit-button:hover {
+                    background-color: #eece51; /* 鼠標懸停時填充顏色 */
+                    color: white; /* 鼠標懸停時文字顏色 */
+                  }
+                </style>
+              </div>
+            </form>  
+            {% endfor %}
+            
+            
+            <!--
+            <div class="items">
+              <div class="img img3"><img src="https://cs-d.ecimg.tw/items/DJAA2VA900A2IRL/000001_1560135612.jpg" alt="java"></div>
+              <div class="name">JAVA</div>
+              <div class="price">$9</div>
+              <div class="info">別當我</div>
+              <div class="info">別當我</div>
+              <div class="overlay" style="align-items: center;justify-content: center;"><button type="submit" class="submit-button">詳情</button></div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://cdnec.sanmin.com.tw/product_images/986/986430062.jpg" alt="中華民國憲法"></div>
+              <div class="name">中華民國憲法</div>
+              <div class="price">$20</div>
+              <div class="info">我不是法律系</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/075/26/0010752675.jpg&v=5912ebf5k&w=250&h=250" alt="管理經濟學"></div>
+              <div class="name">管理經濟學</div>
+              <div class="price">$18</div>
+              <div class="info">好無聊聽不懂啦</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://cf-assets2.tenlong.com.tw/products/images/000/176/148/medium/9789867696397.jpg?1649323809" alt="管理資訊系統"></div>
+              <div class="name">管理資訊系統</div>
+              <div class="price">$6.7</div>
+              <div class="info">別出功課了好好去選舉</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/091/66/0010916668.jpg&v=6202462fk&w=280&h=280" alt="管理學"></div>
+              <div class="name">管理學</div>
+              <div class="price">$10</div>
+              <div class="info">中科院好棒</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/087/13/0010871327.jpg&v=5f648c50k&w=280&h=280" alt="軍事倫理"></div>
+              <div class="name">軍事倫理</div>
+              <div class="price">$9.9</div>
+              <div class="info">我忘了你是幹嘛的</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://www.flag.com.tw/assets/img/bookpic/F7112.jpg" alt="計算機概論"></div>
+              <div class="name">計算機概論</div>
+              <div class="price">$99</div>
+              <div class="info">達達好屌</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://www.flag.com.tw/assets/img/bookpic/F1469.jpg" alt="HTML&CSS"></div>
+              <div class="name">HTML&CSS</div>
+              <div class="price">$30</div>
+              <div class="info">你讓我頭好痛</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://make9.tw/wp-content/uploads/book-html-1.jpeg" alt="跨平台網頁設計"></div>
+              <div class="name">跨平台網頁設計</div>
+              <div class="price">$29.7</div>
+              <div class="info">你跟上一個一樣</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/087/48/0010874876.jpg&v=5fbf91c4k&w=348&h=348" alt="HTML5&CSS3"></div>
+              <div class="name">HTML5&CSS3</div>
+              <div class="price">$100</div>
+              <div class="info">你比較好懂</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/083/05/0010830524.jpg&v=5d416dffk&w=348&h=348" alt="成本與管理會計"></div>
+              <div class="name">成本與管理會計</div>
+              <div class="price">$78</div>
+              <div class="info">買了感覺浪費錢</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/086/51/0010865186_bc_01.jpg&v=5f1ab857k&w=280&h=280" alt="記得你是誰"></div>
+              <div class="name">記得你是誰</div>
+              <div class="price">$9</div>
+              <div class="info">我好愛這個聖誕禮物</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://s.yimg.com/zp/MerchandiseImages/CF67302795-SP-6713845.jpg" alt="多益"></div>
+              <div class="name">多益</div>
+              <div class="price">$36.5</div>
+              <div class="info">我看得懂我便你，但還是別把我當了</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://i4.momoshop.com.tw/1658775511/goodsimg/0009/451/812/9451812_R.webp" alt="資料結構"></div>
+              <div class="name">資料結構</div>
+              <div class="price">$25.6</div>
+              <div class="info">為甚麼我讀了一個禮拜考得比讀四個小時的還差</div>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://www.airitibooks.com/ABCUpLoad/9789866264375.jpg" alt="品質管理"></div>
+              <div class="name">品質管理</div>
+              <div class="price">$56</div>
+              <div class="info">沒品質。</div>
+            </div>-->
+          </div>
+          
+        </div>
+      </div>
+      
+    </section>
+    <footer>
+      <div class="footer0">
+        <br>
+        <h1>我家二手書</h1>
+      </div>
+      <div class="footer1 ">
+        Connect with us at<div class="social-media">
+          <a href="https://www.facebook.com/wangxiaoming">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a href="https://www.youtube.com/channel/UCsRDgUHk8wOoOzCuLoasiVQ">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+          <a href="https://www.instagram.com/wangxiaoming">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <div class="footer3">│國防大學管理學院 │ 臨時服務專線：0932490814 │ 電話: 02-2898-3772 │<br>
+        │地址：112臺北市北投區中央北路二段70號 (復興崗校區) │ </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="../static/js/123.js"></script>
+  
+  </body>
+  
+  </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>新增會員</title>
+  <link rel="stylesheet" href="../static/css/alladminupdate.css">
+</head>
+<body>
+    
+    <div class="signupFrm">
+        
+        <form action="/adminsignup" class="form" method="POST">
+            
+            <h4 class="title">新增會員</h4>
+            <div class="inputContainer">
+                <input type="text" class="input" name="nickname">
+                <label for="" class="label">學號</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" name="department">
+                <label for="" class="label">科系</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" name="grade">
+                <label for="" class="label">年級</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" name="password">
+                <label for="" class="label">密碼</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" name="email">
+                <label for="" class="label">電子信箱</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" name="status">
+                <label for="" class="label">上線狀況</label>
+            </div>
+            
+            <br>
+            <button class="submitBtn" type="submit"> 送出 </button>   
+        </form>
+    </div>
+    <script src="../static/js/sell.js"></script>
+</body>
+</html>

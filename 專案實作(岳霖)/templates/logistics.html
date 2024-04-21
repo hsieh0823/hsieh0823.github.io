@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>運籌系書籍</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/IM.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  </head>
+  
+  
+  <body style="background-color: #DEF1ED;">
+  <header style="background-color: #278092;">
+    
+      <div class="logo">
+        <a href="/product"><img src="../static/images/real-estate.png"/></a>
+      
+      </div>
+      <div class="menu">
+        <a href="#">
+          <ion-icon name="close" class="close"></ion-icon>
+        </a>
+      </div>
+      <div class="search">
+        <form action="/search" method="POST">
+        <input type="text" placeholder="找啥" id="input" name="search">
+        <button class="searchb">
+          搜尋
+        </button>
+      </form>
+      </div>
+      
+      <div class="heading">
+        <ul>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="/caption" >購買規定</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="/Q_A" >Q&A</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="#" class="under"><img class="menuimg" src="../static/images/menu.png"  /></a>
+                  <div class="dropdown-menu" style="background-color: #278092;">
+                    <div style="background-color: #278092;">
+                      <button style="background-color: #278092;"><a href="/my4boss">我4頭家</a></button>
+                      <button style="background-color: #278092;"><a href="/mylove">我的最愛</a></button>
+                      <div class="bur" style="background-color: #278092;">
+                        <a href="#">分類</a>
+                        <div class="nosee" style="background-color: #278092;">
+                          <button style="background-color: #278092;"><a href="/IMproduct">資管系</a></button>
+                          <button style="background-color: #278092;"><a href="/Fin">財管系</a></button>
+                          <button style="background-color: #278092;"><a href="/LAW">法律系</a></button>
+                          <button style="background-color: #278092;"><a href="/logistics">運籌系</a></button>
+                          <button style="background-color: #278092;"><a href="/LibEdu">通識課程</a></button>
+                          <button style="background-color: #278092;"><a href="/other">其他</a></button>
+                        </div>
+                      </div>
+                      <button style="background-color: #278092;"><a href="/admin">會員中心</a></button>
+                      <button style="background-color: #278092;"><a href="/team">製作團隊</a></button>
+                      <button style="background-color: #278092;"><a href="/signout">登出</a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <div class="heading1">
+        <ion-icon name="menu" class="ham"></ion-icon>
+      </div>
+    
+  </header>
+    <section >
+      <div class="section">
+        <div style="height: 50px;"></div>
+        <div class="section2">
+          <div class="container" action="/IMproduct" method="GET">
+            {% for product in products %}
+            <form id="myForm{{ loop.index }}" action="/productinfo" method="POST" class="product-form">
+              <div class="items">
+                <div class="img img1" name="productimage"><img src="{{ product.productimage }}" alt="python"></div>
+                <div class="name" name="productname" value="{{ productname }}">{{ product.productname }}</div>
+                <div class="price" name="productprice">${{ product.productprice }}</div>
+                <div class="info" name="productdescribe">{{ product.productdescribe }}<br><p name="studentID" value="{{ studentID }}">賣家編號: {{ product.studentID }}</p></div>
+                <input type="hidden" name="studentID" value="{{ product.studentID }}">
+                <input type="hidden" name="productname" value="{{ product.productname }}">
+                <div class="overlay" ><button type="submit" class="submit-button">詳情</button></div>
+              </div>
+              
+            </form>  
+            {% endfor %}
+            
+            
+          </div>
+          
+        </div>
+      </div>
+      
+    </section>
+    <footer>
+      <div class="footer0">
+        <br>
+        <h1>我家二手書</h1>
+      </div>
+      <div class="footer1 ">
+        Connect with us at<div class="social-media">
+          <a href="https://www.facebook.com/wangxiaoming">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a href="https://www.youtube.com/channel/UCsRDgUHk8wOoOzCuLoasiVQ">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+          <a href="https://www.instagram.com/wangxiaoming">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <div class="footer3">│國防大學管理學院 │ 臨時服務專線：0932490814 │ 電話: 02-2898-3772 │<br>
+        │地址：112臺北市北投區中央北路二段70號 (復興崗校區) │ </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="../static/js/123.js"></script>
+  
+  </body>
+  
+  </html>

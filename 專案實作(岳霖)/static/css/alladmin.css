@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    
+}
+.container {
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 5px;
+    
+}
+
+.sidebar {
+    width: 20%;
+    font-size: 25px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.sidebar ul li a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    color: white;
+    margin: 2px 14px;
+    font-size: 25px;
+    transition-duration: 1s;
+    
+  }
+.sidebar ul li a:hover {
+    color: rgb(243, 168, 7);
+    transition-duration: 1s;
+  }
+.sidebar ul li a::before {
+    content: "";
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    transition-duration: 1s;
+  }
+.sidebar ul li a:hover::before {
+    width: 100%;
+    transition-duration: 1s;
+    background-color: rgb(243, 168, 7);
+  }
+.content {
+    width: 80%;
+    padding: 20px;
+    height: 550px;
+    overflow-y: auto;
+}
+.sidebar h2 {
+    margin-top: 0;
+    color: #fff;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar li {
+    margin-bottom: 10px;
+}
+.sidebar li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.sidebar li a:hover {
+    color: #fff;
+}
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.product img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.product .info {
+    flex: 1;
+}
+.product h3 {
+    margin-top: 0;
+    color: #333;
+}
+.product p {
+    margin-bottom: 10px;
+    color: #666;
+}
+.delete-btn {
+    text-align: center;
+    background-color: #ff6b6b;
+    font-size: 20px;
+    color: white;
+    border: none;
+    padding: 40px 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+.delete-btn1 {
+    text-align: center;
+    background-color: #ff6b6b;
+    font-size: 20px;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+.delete-btn:hover {
+    background-color: #ff4d4d;
+}
+.delete-btn1:hover {
+    background-color: #ff4d4d;
+}
+
+.online::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 5px;
+  }
+
+  .offline::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    margin-left: 5px;
+  }
+
+
+
+  .sidebar h2 a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    color: white;
+    margin: 2px 14px;
+    font-size: 40px;
+    transition-duration: 1s;
+    
+  }
+.sidebar h2 a:hover {
+    color: rgb(243, 168, 7);
+    transition-duration: 1s;
+  }
+.sidebar h2 a::before {
+    content: "";
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    transition-duration: 1s;
+  }
+.sidebar h2 a:hover::before {
+    width: 100%;
+    transition-duration: 1s;
+    background-color: rgb(243, 168, 7);
+  }

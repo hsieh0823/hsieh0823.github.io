@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>問題回覆</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #eaf7ef; /* 浅绿色背景 */
+    }
+    
+    .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    input[type="password"], input[type="email"], button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="container" action="/Questionreply" method="GET">
+    <h2>問題回答</h2>
+    {% for question in questions %}
+    <p>{{question.question}}</p>
+    <form action="/reply" method="POST">
+        <input type="text" name="answer" placeholder="請輸入問題回覆" style="width:400px; height:200px;" required><br>
+        <input type="hidden" name="question" value="{{ question.question }}">
+        <input type="hidden" name="nickname" value="{{ question.nickname }}">
+        <div> 
+            <br>
+        </div>
+        <button type="submit">儲存回覆</button>
+    </form>
+    {% endfor %}
+</div>
+
+</body>
+</html>

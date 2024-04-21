@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>團隊介紹</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/IM.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+  
+  
+  <body style="background-color: #DEF1ED;">
+  <header style="background-color: #278092;">
+    
+      <div class="logo">
+        <a href="/product"><img src="../static/images/real-estate.png"/></a>
+      
+      </div>
+      <div class="menu">
+        <a href="#">
+          <ion-icon name="close" class="close"></ion-icon>
+        </a>
+      </div>
+      <div class="search">
+        <form action="/search" method="POST">
+        <input type="text" placeholder="找啥" id="input" name="search">
+        <button class="searchb">
+          搜尋
+        </button>
+      </form>
+      </div>
+      
+      <div class="heading">
+        <ul>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="/caption" >購買規定</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="/Q_A" >Q&A</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdowns" style="background-color: #278092;">
+                <div class="dropdown" style="background-color: #278092;">
+                  <a href="#" class="under"><img class="menuimg" src="../static/images/menu.png"  /></a>
+                  <div class="dropdown-menu" style="background-color: #278092;height: 256px;">
+                    <div style="background-color: #278092;">
+                      <button style="background-color: #278092;"><a href="/my4boss">我4頭家</a></button>
+                      <button style="background-color: #278092;"><a href="/mylove">我的最愛</a></button>
+                      <div class="bur" style="background-color: #278092;">
+                        <a href="#">分類</a>
+                        <div class="nosee" style="background-color: #278092;">
+                          <style>
+                            .bur:hover .nosee{
+                              display: block;
+                              position: absolute;
+                              visibility: visible;
+                              top: -92px;
+                              left: 100px;
+                              color: #fff;
+                              font-size: .8em;
+                              background: rgb(39, 128, 146);
+                              padding: 11px 50px 5px;
+                              z-index: -1;
+                            }
+                          </style>
+                          <button style="background-color: #278092;"><a href="/IMproduct">資管系</a></button>
+                          <button style="background-color: #278092;"><a href="/Fin">財管系</a></button>
+                          <button style="background-color: #278092;"><a href="/LAW">法律系</a></button>
+                          <button style="background-color: #278092;"><a href="/logistics">運籌系</a></button>
+                          <button style="background-color: #278092;"><a href="/LibEdu">通識課程</a></button>
+                          <button style="background-color: #278092;"><a href="/other">其他</a></button>
+                        </div>
+                      </div>
+                      <button style="background-color: #278092;"><a href="/admin">會員中心</a></button>
+                      <button style="background-color: #278092;"><a href="/signout">登出</a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <div class="heading1">
+        <ion-icon name="menu" class="ham"></ion-icon>
+      </div>
+    
+  </header>
+    <section style="display: flex;flex-wrap: wrap;justify-content: center;align-items: center;">
+        <div class="card" onclick="this.classList.toggle('is-flipped')">
+            <div class="inner-card">
+              <div class="front">
+                <img src="../static/images/35627.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="name">陳寬宏</div>
+                <div class="nickname">海上飄</div>
+              </div>
+              <div class="back">
+                <div class="introduction">
+                  我是資管系四年級陳寬宏，喜歡看棒球，耶!
+                </div>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/wangxiaoming"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/wangxiaoming"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" onclick="this.classList.toggle('is-flipped')">
+            <div class="inner-card">
+              <div class="front">
+                <img src="../static/images/35632.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="name">謝獻葳</div>
+                <div class="nickname">臭矮子</div>
+              </div>
+              <div class="back">
+                <div class="introduction">
+                  我是資管系四年級謝獻葳，喜歡打電腦，耶!
+                </div>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/wangxiaoming"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/wangxiaoming"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" onclick="this.classList.toggle('is-flipped')">
+            <div class="inner-card">
+              <div class="front">
+                <img src="../static/images/35648.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="name">黃鵬紐</div>
+                <div class="nickname">海上漂</div>
+              </div>
+              <div class="back">
+                <div class="introduction">
+                  我是資管系四年級黃鵬紐，喜歡唱歌，耶!
+                </div>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/wangxiaoming"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/wangxiaoming"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" onclick="this.classList.toggle('is-flipped')">
+            <div class="inner-card">
+              <div class="front">
+                <img src="../static/images/35643.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="name">鄭珺耀</div>
+                <div class="nickname">國防姚明</div>
+              </div>
+              <div class="back">
+                <div class="introduction">
+                  我是資管系四年級鄭珺耀，喜歡打籃球，耶!
+                </div>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/wangxiaoming"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/wangxiaoming"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="card" onclick="this.classList.toggle('is-flipped')">
+            <div class="inner-card">
+              <div class="front">
+                <img src="../static/images/35631.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="name">么庭恩</div>
+                <div class="nickname">資安小天才</div>
+              </div>
+              <div class="back">
+                <div class="introduction">
+                  我是資管系四年級么庭恩，喜歡打別人電腦，耶!
+                </div>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/wangxiaoming"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/wangxiaoming"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" onclick="this.classList.toggle('is-flipped')">
+            <div class="inner-card">
+              <div class="front">
+                <img src="../static/images/35628.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="name">張馨予</div>
+                <div class="nickname">主計大大</div>
+              </div>
+              <div class="back">
+                <div class="introduction">
+                  我是資管系四年級張馨予，喜歡，耶!
+                </div>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/wangxiaoming"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/wangxiaoming"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" onclick="this.classList.toggle('is-flipped')">
+            <div class="inner-card">
+              <div class="front">
+                <img src="../static/images/35634.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="name">林奕彣</div>
+                <div class="nickname">低音部</div>
+              </div>
+              <div class="back">
+                <div class="introduction">
+                  我是資管系四年級林奕彣，不要隨隨便便，耶!
+                </div>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/wangxiaoming"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/wangxiaoming"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" onclick="this.classList.toggle('is-flipped')">
+            <div class="inner-card">
+              <div class="front">
+                <img src="../static/images/35621.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="name">蔡書怡</div>
+                <div class="nickname">ㄎㄧㄤ</div>
+              </div>
+              <div class="back">
+                <div class="introduction">
+                  我是資管系四年級蔡書怡，喜歡打鵬紐，耶!
+                </div>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/wangxiaoming"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/wangxiaoming"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .card {
+              width: 300px;
+              height: 400px;
+              position: relative;
+              margin: 20px 30px;
+              perspective: 1000px;
+              border-radius: 20px;
+              background-color: #fff;
+              box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              cursor: pointer;
+            }
+          
+            .card .inner-card {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              transition: transform 0.8s;
+              transform-style: preserve-3d;
+            }
+          
+            .card .back {
+              transform: rotateY(180deg);
+            }
+          
+            .front,
+            .back {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              backface-visibility: hidden;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              padding: 20px;
+              box-sizing: border-box;
+            }
+          
+            .profile-pic {
+              width: 150px;
+              height: 150px;
+              border-radius: 50%;
+              margin-bottom: 20px;
+            }
+          
+            .name {
+              font-size: 24px;
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
+          
+            .nickname {
+              font-size: 18px;
+              color: #666;
+              margin-bottom: 20px;
+            }
+          
+            .introduction {
+              font-size: 16px;
+              color: #333;
+              line-height: 1.6;
+            }
+          
+            .social-icons {
+              margin-top: auto;
+            }
+          
+            .social-icons a {
+              display: inline-block;
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              border-radius: 50%;
+              background-color: #333;
+              color: #fff;
+              font-size: 20px;
+              margin: 0 5px;
+              text-decoration: none;
+              transition: background-color 0.3s;
+            }
+          
+            .social-icons a:hover {
+              background-color: #666;
+            }
+          
+            .card.is-flipped .inner-card {
+              transform: rotateY(180deg);
+            }
+          </style>
+    </section>
+    <footer>
+      <div class="footer0">
+        <br>
+        <h1>我家二手書</h1>
+      </div>
+      <div class="footer1 ">
+        Connect with us at<div class="social-media">
+          <a href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a href="https://www.youtube.com/channel/UCsRDgUHk8wOoOzCuLoasiVQ">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+          <a href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <div class="footer3">│國防大學管理學院 │ 臨時服務專線：0932490814 │ 電話: 02-2898-3772 │<br>
+        │地址：112臺北市北投區中央北路二段70號 (復興崗校區) │ </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="../static/js/123.js"></script>
+  
+  </body>
+  
+  </html>

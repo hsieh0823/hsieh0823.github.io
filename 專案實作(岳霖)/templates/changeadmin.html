@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>更改會員資料</title>
+  <link rel="stylesheet" href="../static/css/changeadmin.css" media="screen">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+function MM_openBrWindow(theURL,winName,features) {
+  window.open(theURL,winName,features);
+}
+</script>
+</head>
+<body>
+<div id="wrapper"> 
+  <div id="header">
+    <h1> <strong>更改會員資料</strong></h1>
+    <strong class="header-text">更改你的會員資料</strong></div>
+  
+  <ul id="button">
+          <li><a href="/product">首頁</a></li>
+          <li><a href="/admin">會員中心</a></li>
+          <li><a href="/mylove">我的最愛</a></li>
+          <li><a href="/my4boss">我4頭家</a></li>
+          <li><a href="/signout">登出</a></li>
+  </ul>
+  
+  <div id="content">
+    <h2>您的資料 </h2>
+    <table class="member-table" action="/changeadmin" method="GET">
+      <tr>
+          <th>學號</th>
+          <th>科系</th>
+          <th>年級</th>
+          <th>密碼</th>
+          <th>電子信箱</th>
+      </tr>
+    <form action="/changeadmin" method="POST">
+      <tr>
+          <td><input type="text" name="nickname" value={{member.nickname}} readonly></td>
+          <td><input type="text" name="department" value={{member.department}}></td>
+          <td><input type="text" name="grade" value={{member.grade}}></td>
+          <td><input type="text" name="password" value={{member.password}}></td>
+          <td><input type="text" name="email" value={{member.email}}></td>
+          <style>
+            /* 將 input 框縮小 */
+            input {
+                width: 120px; /* 設置 input 框的寬度 */
+                height: 20px; /* 設置 input 框的高度 */
+                padding: 5px; /* 設置內容與邊框之間的距離 */
+                border: 1px solid #ccc; /* 添加邊框 */
+                border-radius: 5px; /* 添加圓角 */
+            }
+    
+            /* 美化提交按鈕 */
+            input[type="submit"] {
+                width: 100px;
+                height: 30px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    
+            /* 根據需要調整其他樣式 */
+        </style>
+      </tr>
+      
+    </table>
+    <p>&nbsp;</p>
+    <button class="submitBtn"><a class="words" style="color: #fff;text-decoration: none;">確定更改</a></button>
+    </form>
+    
+    
+    <p>&nbsp;</p>
+    
+  </div>
+  
+  <div id="footer">
+  │國防大學管理學院 │ 臨時服務專線：0932490814 │ 電話: 02-2898-3772 │<br>
+  │地址：112臺北市北投區中央北路二段70號 (復興崗校區) │ </div>
+</div>
+</body>
+</html>

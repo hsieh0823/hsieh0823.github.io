@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../static/css/allproduct.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商品管理系统</title>
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <h2><a href="/administrator">功能</a></h2>
+        <ul>
+            <li><a href="/product">首頁</a></li>
+            <li><a href="/alladmin">會員管理系統</a></li>
+            <li><a href="/allqa">問題回答系統</a></li>
+            <li><a href="/sendemail">郵件寄送系統</a></li>
+            <li><a href="/signout">登出</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        {% for product in products %}
+        <div class="product" action="/allproduct" method="GET" >
+            <form method="POST" action="/allproductupdate" id="myForm" style="display: flex;">
+            <img src= {{product.productimage}} alt="Product 1" width="200" height="200">
+            <div class="info" style="width: 750px;">
+                <h3>書 名 : {{product.productname}}</h3>
+                <p>賣 家 : {{ product.studentID }}</p>
+                <p>價 格 : {{ product.productprice }}</p>
+                <p >聯 絡 方 式 ： {{product.productcall}}</p>
+                <p>上 價 時 間 : {{ product.time }}</p>
+                <input type="hidden" name="studentID" value="{{ product.studentID }}">
+                <input type="hidden" name="productname" value="{{ product.productname }}">
+            </div>
+            <div style="display: flex;">
+            <button class="delete-btn" type="submit"style="float: right;padding: 60px 20px;">修改</button>
+            </div>
+            </form>
+            <form method="POST" action="/allproductdelete" id="deleteForm">
+                <input type="hidden" name="studentID" value="{{ product.studentID }}">
+                <input type="hidden" name="productname" value="{{ product.productname }}">
+                <button class="delete-btn" type="submit" style="margin-left: 10px;padding: 80px 20px;">下架</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+    <div>
+    <button class="delete-btn1" type="submit" style="position: absolute;bottom: 20px;right: 20px;"><a href="/allproductsell" style="color: #fff;text-decoration: none;">新增</a></button>
+    </div>
+</div>
+<script>
+    function setAction(action) {
+        document.getElementById("myForm").action = action;
+        document.getElementById("myForm").submit();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>新增提問</title>
+  <link rel="stylesheet" href="../static/css/sellstly.css">
+</head>
+<body>
+    
+    <div class="signupFrm">
+        
+        <form action="/qaincrease" class="form" method="POST">
+            
+            <h4 class="title">新增提問</h4>
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="question">
+                <label for="" class="label">問題</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="nickname">
+                <label for="" class="label">提問人</label>
+            </div>
+
+            <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" name="answer">
+                <label for="" class="label">回覆</label>
+            </div>
+
+            <button class="submitBtn"> 送出 </button>   
+        </form>
+    </div>
+    <script src="../static/js/sell.js"></script>
+</body>
+</html>

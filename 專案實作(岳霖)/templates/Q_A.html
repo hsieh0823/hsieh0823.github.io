@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q&A</title>
+  <link rel="stylesheet" href="../static/css/Q&A.css" media="screen">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+function MM_openBrWindow(theURL,winName,features) {
+  window.open(theURL,winName,features);
+}
+</script>
+</head>
+<body>
+<div id="wrapper"> 
+  <div id="header">
+    <h1> <strong>Q&A</strong></h1>
+    <strong class="header-text">這裡可以提出你對網站的任何問題!</strong></div>
+  
+  <ul id="button">
+          <li><a href="/product">首頁</a></li>
+          <li><a href="/admin">會員中心</a></li>
+          <li><a href="/mylove">我的最愛</a></li>
+          <li><a href="/caption">購買規定</a></li>
+          <li><a href="/signout">登出</a></li>
+  </ul>
+  
+  <div id="content">
+    <h2>Q&A</h2>
+    <p>歡迎來到"Q&A"，在這裡您可以做以下幾點事項:</p>
+    <ul>
+      <li>提出問題。</li>
+      <li>回覆別人的問題。</li>
+      <li>保持禮節。</li>
+    </ul>
+    <hr>
+        
+        <div action="/Q_A" method="GET">
+            <div class="container">
+              {% for questions in questionss %}
+              <div class="comment-container">
+                  <div class="comment">
+                    <p style="color:#2F829D;">#{{questions.nickname}}</p>
+                      <p name="question">{{questions.question}}</p>
+                      <form action="/Q_A" method="POST"><input type="hidden" name="question" value="{{questions.question}}"></form>
+                      <div class="reply" style="border-color:pink;border-width:3px;border-style:solid;padding:4px;">
+                          <form action="/Q_A" method="GET">
+                          <p style="color:#2F829D;">#管理員</p>
+                          <p>{{questions.answer}}</p>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+              {% endfor %}
+            </div>
+            
+                <style>
+                .submitBtn1 {
+                  float: right;
+                  margin-right: auto;
+                  
+                  padding: 10px 20px;
+                  border: none;
+                  background-color: #2F829D;
+                  color: white;
+                  border-radius: 6px;
+                  cursor: pointer;
+                  font-size: 15px;
+                  margin-top: 30px;
+                }
+                .submitBtn1:hover {
+                  background-color: #C4E6DF;
+                  transform: translateY(-2px);
+                }
+              </style>
+              </p></td>
+          
+            </div>
+        <div class="comment-form">
+          <h3>問題留言</h3>
+          <form action="/questions" method="POST">
+              <input name="question"  style="width:650px;height:50px;" placeholder="請輸入問題">
+              <br>
+              <button class="submitBtn1">上傳問題</button>
+          </form>
+        </div>
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+  
+  <div id="footer">
+  │國防大學管理學院 │ 臨時服務專線：0932490814 │ 電話: 02-2898-3772 │<br>
+  │地址：112臺北市北投區中央北路二段70號 (復興崗校區) │ </div>
+</div>
+</body>
+</html>
